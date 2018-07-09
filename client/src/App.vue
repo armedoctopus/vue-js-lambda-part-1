@@ -14,7 +14,7 @@ export default {
     Auth0.configure({
       domain: 'alien-go-home.auth0.com',
       clientID: 'NQipGcpZsGn0CEpJPbVFoKZDY0I7WuVP',
-      audience: 'https://alien-go-home.auth0.com/userinfo',
+      audience: 'https://micro-blog-app',
       redirectUri: 'http://localhost:8080/callback',
       responseType: 'token id_token',
       scope: 'openid profile'
