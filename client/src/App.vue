@@ -6,8 +6,20 @@
 </template>
 
 <script>
+import * as Auth0 from 'auth0-web'
+
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    Auth0.configure({
+      domain: 'alien-go-home.auth0.com',
+      clientID: 'NQipGcpZsGn0CEpJPbVFoKZDY0I7WuVP',
+      audience: 'https://alien-go-home.auth0.com/userinfo',
+      redirectUri: 'http://localhost:8080/callback',
+      responseType: 'token id_token',
+      scope: 'openid profile'
+    })
+  }
 }
 </script>
 
